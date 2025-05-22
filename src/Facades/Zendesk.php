@@ -2,9 +2,6 @@
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @mixin \Zendesk\API\HttpClient
- */
 class Zendesk extends Facade
 {
 
@@ -13,6 +10,8 @@ class Zendesk extends Facade
      *
      * @return string
      */
-    protected static function getFacadeAccessor() { return 'zendesk'; }
-
+    protected static function getFacadeAccessor(): string
+    {
+        return 'zendesk';
+    }
 }

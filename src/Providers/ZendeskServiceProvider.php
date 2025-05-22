@@ -11,7 +11,7 @@ class ZendeskServiceProvider extends ServiceProvider {
      *
      * @var bool
      */
-    protected $defer = false;
+    protected bool $defer = false;
 
     /**
      * Register the service provider and merge config.

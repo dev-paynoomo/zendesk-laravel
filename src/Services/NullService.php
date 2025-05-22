@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Log;
 
-class NullService {
+class NullService
+{
 
     /**
      * @var bool
@@ -17,18 +18,18 @@ class NullService {
     public function __call($name, $arguments)
     {
         if ($this->logCalls) {
-            Log::debug('Called Huddle Zendesk facade method: '.$name.' with:', $arguments);
+            Log::debug('Called Huddle Zendesk facade method: ' . $name . ' with:', $arguments);
 
             return new self;
         }
 
         return $this;
     }
-    
+
     public function __get(string $name)
     {
         if ($this->logCalls) {
-            Log::debug('Called Huddle Zendesk facade property: '.$name);
+            Log::debug('Called Huddle Zendesk facade property: ' . $name);
 
             return new self;
         }
